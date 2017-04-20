@@ -15,11 +15,11 @@ class StudentClassTest extends Specification {
             studentClass.nextQuestion()
             studentClass.nextQuestion()
         then:
-            studentClass.isNumberDivisionBy(2)
+            studentClass.isQuestionNumberDivisionBy(2)
         when:
             studentClass.nextQuestion()
         then:
-            studentClass.isNumberDivisionBy(3)
+            studentClass.isQuestionNumberDivisionBy(3)
     }
 
     def "class returns one of studnet with are added to class"() {
@@ -39,13 +39,13 @@ class StudentClassTest extends Specification {
 
             List<Student> studentsFromClassWithRemovedDuplicates = new HashSet<Student>(
                     Arrays.asList(
-                        studentClass.getStudent(),
-                        studentClass.getStudent(),
-                        studentClass.getStudent(),
-                        studentClass.getStudent(),
-                        studentClass.getStudent(),
-                        studentClass.getStudent(),
-                        studentClass.getStudent(),
+                        studentClass.getRandomStudent(),
+                        studentClass.getRandomStudent(),
+                        studentClass.getRandomStudent(),
+                        studentClass.getRandomStudent(),
+                        studentClass.getRandomStudent(),
+                        studentClass.getRandomStudent(),
+                        studentClass.getRandomStudent(),
                     )).toList();
 
         then:

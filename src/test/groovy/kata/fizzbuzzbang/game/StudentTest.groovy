@@ -44,7 +44,7 @@ class StudentTest extends Specification {
     def "student answer correct answear for defined number"() {
 
         given:
-            Player player = studentClass.getStudent()
+            Player player = studentClass.getRandomStudent()
         when:
             String answear = player.answerTheQuestion(135)
             print(answear)
@@ -66,7 +66,7 @@ class StudentTest extends Specification {
             )
             studentClass.addStudents(studentList)
 
-            Player player = studentClass.getStudent()
+            Player player = studentClass.getRandomStudent()
 
         when:
             String answear = player.answerTheQuestion(NUMBER)
@@ -87,7 +87,7 @@ class StudentTest extends Specification {
             )
             studentClass.addStudents(studentList)
 
-            Player player = studentClass.getStudent()
+            Player player = studentClass.getRandomStudent()
 
         when:
             String answear = player.answerTheQuestion(NUMBER)

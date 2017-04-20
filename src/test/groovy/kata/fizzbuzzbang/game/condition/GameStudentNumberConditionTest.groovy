@@ -15,12 +15,12 @@ class GameStudentNumberConditionTest extends Specification {
     def "condition is met when QuestionNumber in student class is divisible by defined number and game is extended type "() {
         given:
             StudentClass studentClass = Mock(StudentClass){
-                isNumberDivisionBy (_) >> true
+                isQuestionNumberDivisionBy (_) >> true
             }
 
             GameCondition divisible = new GameStudentNumberCondition(studentClass, GameType.EXTENDED)
         when:
-            print studentClass.isNumberDivisionBy(NUMBER)
+            print studentClass.isQuestionNumberDivisionBy(NUMBER)
             def result = divisible.isConditionMet(15)
         then:
             result == true
@@ -29,7 +29,7 @@ class GameStudentNumberConditionTest extends Specification {
     def "condition is not met when QuestionNumber in student class is not divisible by defined number"() {
         given:
             StudentClass studentClass = Mock(StudentClass){
-                isNumberDivisionBy(_ as Integer) >> false
+                isQuestionNumberDivisionBy(_ as Integer) >> false
             }
 
             GameCondition divisible = new GameStudentNumberCondition(studentClass, GameType.EXTENDED)
@@ -42,7 +42,7 @@ class GameStudentNumberConditionTest extends Specification {
     def "condition is not met when game is in Standard Type"() {
         given:
             StudentClass studentClass = Mock(StudentClass){
-                isNumberDivisionBy(_ as Integer) >> true
+                isQuestionNumberDivisionBy(_ as Integer) >> true
             }
 
             GameCondition divisible = new GameStudentNumberCondition(studentClass, GameType.STANDARD)

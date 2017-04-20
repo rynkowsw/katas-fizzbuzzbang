@@ -49,7 +49,7 @@ public class Teacher {
 
         for (int i=1; i < 100 ; i++)
         {
-            Player player = studentClass.getStudent();
+            Player player = studentClass.getRandomStudent();
             System.out.println(player.answerTheQuestion(i));
         }
     }
