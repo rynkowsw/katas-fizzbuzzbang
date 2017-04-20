@@ -1,7 +1,7 @@
 package kata.fizzbuzzbang.game
 
 import kata.fizzbuzzbang.game.condition.GameCondition
-import kata.fizzbuzzbang.game.condition.GameForFiftenCondition
+import kata.fizzbuzzbang.game.condition.GameForFifteenCondition
 import kata.fizzbuzzbang.game.condition.GameForFiveCondition
 import kata.fizzbuzzbang.game.condition.GameForThreeCondition
 import kata.fizzbuzzbang.game.condition.GameStudentNumberCondition
@@ -30,7 +30,7 @@ class StudentTest extends Specification {
         gameConditions = Arrays.asList(
                 new GameForFiveCondition(gameType),
                 new GameForThreeCondition(gameType),
-                new GameForFiftenCondition(),
+                new GameForFifteenCondition(),
                 new GameStudentNumberCondition(studentClass, gameType)
         )
 
@@ -49,7 +49,7 @@ class StudentTest extends Specification {
             String answear = player.answerTheQuestion(135)
             print(answear)
         then:
-            answear.contains(GameForFiftenCondition.MESSAGE.message()) &&
+            answear.contains(GameForFifteenCondition.MESSAGE.message()) &&
             answear.contains(GameForFiveCondition.EXTENDED_MESSAGE.message()) &&
             answear.contains(GameForThreeCondition.EXTENDED_MESSAGE.message()) &&
             answear == "My name is: Jasiek and answer for number 135 is: Mruu!,Pow!,FizzBuzz!"
@@ -78,7 +78,7 @@ class StudentTest extends Specification {
 
         given:
             studentClass = new StudentClass()
-            gameConditions = Arrays.asList(Mock(GameForFiftenCondition){
+            gameConditions = Arrays.asList(Mock(GameForFifteenCondition){
                 isConditionMet(_ as int) >> false
             }) as List<GameCondition>
 

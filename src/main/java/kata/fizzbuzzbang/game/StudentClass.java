@@ -6,15 +6,21 @@ import java.util.Random;
 
 public class StudentClass {
 
-    private int numberOfQestion = 0;
+    private int numberOfQuestions;
 
     private List<Student> studentList;
 
-    private Random rand = new Random();
+    private Random rand;
 
     public StudentClass(){
         this.studentList = new ArrayList<>();
         this.rand = new Random();
+        numberOfQuestions = 0;
+    }
+
+
+    private int getRandomStudentNumber(){
+        return rand.nextInt(studentList.size());
     }
 
     public void addStudents(List<Student> studentList){
@@ -25,17 +31,14 @@ public class StudentClass {
         return studentList.get(getRandomStudentNumber());
     }
 
-    public void nextQestion(){
-        numberOfQestion++;
+
+
+    public void nextQuestion(){
+        numberOfQuestions++;
     }
 
-    public boolean isNumberDivisionBy(int number){
+    public boolean isNumberDivisionBy(int number){ return (numberOfQuestions % number == 0); }
 
-        return (numberOfQestion % number == 0);
-    }
 
-    private int getRandomStudentNumber(){
-        return rand.nextInt(studentList.size());
-    }
 
 }

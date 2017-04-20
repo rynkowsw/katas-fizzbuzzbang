@@ -23,7 +23,7 @@ public class Student implements Player{
 
     public  String answerTheQuestion( int questedNumber) {
 
-        studentClass.nextQestion();
+        studentClass.nextQuestion();
 
         String answerMessage = divisibleConditions.stream()
                 .filter(condition -> condition.isConditionMet(questedNumber))

@@ -8,7 +8,7 @@ import kata.fizzbuzzbang.game.StudentClass;
 import kata.fizzbuzzbang.game.GameType;
 import kata.fizzbuzzbang.game.Student;
 import kata.fizzbuzzbang.game.condition.GameCondition;
-import kata.fizzbuzzbang.game.condition.GameForFiftenCondition;
+import kata.fizzbuzzbang.game.condition.GameForFifteenCondition;
 import kata.fizzbuzzbang.game.condition.GameForFiveCondition;
 import kata.fizzbuzzbang.game.condition.GameForThreeCondition;
 import kata.fizzbuzzbang.game.condition.GameStudentNumberCondition;
@@ -24,7 +24,7 @@ public class Teacher {
         return Arrays.asList(
                 new GameForFiveCondition(gameType),
                 new GameForThreeCondition(gameType),
-                new GameForFiftenCondition(),
+                new GameForFifteenCondition(),
                 new GameStudentNumberCondition(studentsClass, gameType)
         );
     }

@@ -5,11 +5,11 @@ import spock.lang.Specification
 /**
  * Created by wojciech on 18.04.17.
  */
-class GameForFiftenConditionTest extends Specification {
+class GameForFifteenConditionTest extends Specification {
 
     def "condition is met when number is divisible by 15"() {
         given:
-            GameCondition divisible = new GameForFiftenCondition()
+            GameCondition divisible = new GameForFifteenCondition()
         when:
             def result = divisible.isConditionMet(30)
         then:
@@ -18,7 +18,7 @@ class GameForFiftenConditionTest extends Specification {
 
     def "condition is not met when number is not divisible by 15"() {
         given:
-            GameCondition divisible = new GameForFiftenCondition()
+            GameCondition divisible = new GameForFifteenCondition()
         when:
             def result = divisible.isConditionMet(31)
         then:
@@ -27,7 +27,7 @@ class GameForFiftenConditionTest extends Specification {
 
     def "condition always return fizzbuz message "() {
         given:
-            GameCondition divisible = new GameForFiftenCondition()
+            GameCondition divisible = new GameForFifteenCondition()
         when:
             def message = divisible.message()
         then:

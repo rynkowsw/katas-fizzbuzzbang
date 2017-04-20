@@ -12,12 +12,12 @@ class StudentClassTest extends Specification {
         given:
             StudentClass studentClass = new StudentClass()
         when:
-            studentClass.nextQestion()
-            studentClass.nextQestion()
+            studentClass.nextQuestion()
+            studentClass.nextQuestion()
         then:
             studentClass.isNumberDivisionBy(2)
         when:
-            studentClass.nextQestion()
+            studentClass.nextQuestion()
         then:
             studentClass.isNumberDivisionBy(3)
     }
