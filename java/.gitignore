@@ -1,7 +1,0 @@
-# intellij related
-*.iml
-.idea
-
-# gradle related
-.gradle
-build
