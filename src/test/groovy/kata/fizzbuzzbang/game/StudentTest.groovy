@@ -44,7 +44,7 @@ class StudentTest extends Specification {
     def "student answer correct answear for defined number"() {
 
         given:
-            Player player = studentClass.getRandomStudent()
+            Player player = studentClass.randomStudentFromClass()
         when:
             String answear = player.answerTheQuestion(135)
             print(answear)
@@ -54,6 +54,7 @@ class StudentTest extends Specification {
             answear.contains(GameForThreeCondition.EXTENDED_MESSAGE.message()) &&
             answear == "My name is: Jasiek and answer for number 135 is: Mruu!,Pow!,FizzBuzz!"
     }
+
 
     def "student answer the same number for missed conditions"() {
 
@@ -66,7 +67,7 @@ class StudentTest extends Specification {
             )
             studentClass.addStudents(studentList)
 
-            Player player = studentClass.getRandomStudent()
+            Player player = studentClass.randomStudentFromClass()
 
         when:
             String answear = player.answerTheQuestion(NUMBER)
@@ -87,7 +88,7 @@ class StudentTest extends Specification {
             )
             studentClass.addStudents(studentList)
 
-            Player player = studentClass.getRandomStudent()
+            Player player = studentClass.randomStudentFromClass()
 
         when:
             String answear = player.answerTheQuestion(NUMBER)

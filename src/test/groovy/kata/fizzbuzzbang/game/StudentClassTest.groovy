@@ -39,13 +39,13 @@ class StudentClassTest extends Specification {
 
             List<Student> studentsFromClassWithRemovedDuplicates = new HashSet<Student>(
                     Arrays.asList(
-                        studentClass.getRandomStudent(),
-                        studentClass.getRandomStudent(),
-                        studentClass.getRandomStudent(),
-                        studentClass.getRandomStudent(),
-                        studentClass.getRandomStudent(),
-                        studentClass.getRandomStudent(),
-                        studentClass.getRandomStudent(),
+                        studentClass.randomStudentFromClass(),
+                        studentClass.randomStudentFromClass(),
+                        studentClass.randomStudentFromClass(),
+                        studentClass.randomStudentFromClass(),
+                        studentClass.randomStudentFromClass(),
+                        studentClass.randomStudentFromClass(),
+                        studentClass.randomStudentFromClass(),
                     )).toList();
 
         then:

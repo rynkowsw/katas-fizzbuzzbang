@@ -26,7 +26,7 @@ public class GameStudentNumberCondition implements GameCondition {
     @Override
     public boolean isConditionMet(int questionNumber) {
 
-        boolean questionIsDivisibleByFifteen = ( studentsClass.isNumberDivisionBy(DIVIDER));
+        boolean questionIsDivisibleByFifteen = ( studentsClass.isQuestionNumberDivisionBy(DIVIDER));
 
         return (questionIsDivisibleByFifteen && isExtendedGame) ;
     }

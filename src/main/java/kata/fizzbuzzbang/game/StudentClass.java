@@ -27,7 +27,7 @@ public class StudentClass {
         this.studentList.addAll(studentList);
     }
 
-    public Student getStudent(){
+    public Student randomStudentFromClass(){
         return studentList.get(getRandomStudentNumber());
     }
 
@@ -37,7 +37,7 @@ public class StudentClass {
         numberOfQuestions++;
     }
 
-    public boolean isNumberDivisionBy(int number){ return (numberOfQuestions % number == 0); }
+    public boolean isQuestionNumberDivisionBy(int number){ return (numberOfQuestions % number == 0); }
 
 
 
