@@ -1,4 +1,4 @@
-package kata.fizzbuzzbang.game;
+package kata.fizzbuzzbang.game.player;
 
 /**
  * Created by wojciech on 18.04.17.

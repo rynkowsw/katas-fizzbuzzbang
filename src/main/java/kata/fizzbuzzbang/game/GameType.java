@@ -5,15 +5,13 @@ package kata.fizzbuzzbang.game;
  */
 public enum GameType {
 
-    STANDARD(false),
-    EXTENDED(true);
+    STANDARD("STANDARD"),
+    EXTENDED("EXTENDED");
 
-    private final Boolean gameType;
+    private final String gameType;
 
-    GameType( Boolean gameType) {
+    GameType( String gameType) {
         this.gameType = gameType;
     }
-
-    public Boolean isExtendedGame(){ return gameType;}
 
 }

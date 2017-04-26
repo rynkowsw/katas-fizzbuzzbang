@@ -1,4 +1,4 @@
-package kata.fizzbuzzbang.game;
+package kata.fizzbuzzbang.game.player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,19 +18,13 @@ public class StudentClass {
         numberOfQuestions = 0;
     }
 
-
-    private int getRandomStudentNumber(){
-        return rand.nextInt(studentList.size());
-    }
-
     public void addStudents(List<Student> studentList){
         this.studentList.addAll(studentList);
     }
 
     public Student randomStudentFromClass(){
-        return studentList.get(getRandomStudentNumber());
+        return studentList.get(randomStudentNumber());
     }
-
 
 
     public void nextQuestion(){
@@ -39,6 +33,10 @@ public class StudentClass {
 
     public boolean isQuestionNumberDivisionBy(int number){ return (numberOfQuestions % number == 0); }
 
+
+    private int randomStudentNumber(){
+        return rand.nextInt(studentList.size());
+    }
 
 
 }

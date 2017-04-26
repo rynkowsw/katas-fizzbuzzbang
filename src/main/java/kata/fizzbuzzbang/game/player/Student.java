@@ -1,23 +1,29 @@
-package kata.fizzbuzzbang.game;
+package kata.fizzbuzzbang.game.player;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import kata.fizzbuzzbang.game.condition.GameCondition;
+import kata.fizzbuzzbang.game.condition.provider.ConditionProvider;
+import kata.fizzbuzzbang.game.condition.base.GameCondition;
 
 /**
  * Created by wojciech on 18.04.17.
  */
 
-public class Student implements Player{
+public class Student implements Player {
 
-    private List<GameCondition> divisibleConditions;
+    private List<GameCondition> gameConditions;
+
     private StudentClass studentClass;
+
     private String name;
 
-    public Student( List<GameCondition> divisibleConditions, StudentClass studentClass, String name){
-        this.divisibleConditions = divisibleConditions;
+    protected static final String MESSAGE_SEPARATOR = ",";
+
+    public Student(ConditionProvider conditionProvider, StudentClass studentClass, String name){
+
         this.studentClass = studentClass;
+        this.gameConditions = conditionProvider.askedNumberConditions(studentClass);
         this.name = name;
     }
 
@@ -25,16 +31,16 @@ public class Student implements Player{
 
         studentClass.nextQuestion();
 
-        String answerMessage = divisibleConditions.stream()
+        String answerMessage = gameConditions.stream()
                 .filter(condition -> condition.isConditionMet(questedNumber))
                 .map(GameCondition::message)
-                .collect(Collectors.joining(","));
+                .collect(Collectors.joining(MESSAGE_SEPARATOR));
 
         if( answerMessage.isEmpty() ) {
             answerMessage = String.valueOf(questedNumber);
         }
 
-        return "My name is: " + name+ " and answer for number "+ questedNumber +" is: "+ answerMessage;
+        return answerMessage;
     }
 
     @Override
@@ -44,14 +50,14 @@ public class Student implements Player{
 
         Student student = (Student) o;
 
-        if (divisibleConditions != null ? !divisibleConditions.equals(student.divisibleConditions) : student.divisibleConditions != null)
+        if (gameConditions != null ? !gameConditions.equals(student.gameConditions) : student.gameConditions != null)
             return false;
         return name != null ? name.equals(student.name) : student.name == null;
     }
 
     @Override
     public int hashCode() {
-        int result = divisibleConditions != null ? divisibleConditions.hashCode() : 0;
+        int result = gameConditions != null ? gameConditions.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
     }
