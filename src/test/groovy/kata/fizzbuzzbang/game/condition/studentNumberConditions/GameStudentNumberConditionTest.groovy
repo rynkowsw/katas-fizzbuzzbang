@@ -1,11 +1,10 @@
 package kata.fizzbuzzbang.game.condition.studentNumberConditions
 
-import kata.fizzbuzzbang.game.condition.base.Condition
+import kata.fizzbuzzbang.game.condition.Condition
 import kata.fizzbuzzbang.game.player.StudentClass
 import spock.lang.Specification
-/**
- * Created by wojciech on 26.04.17.
- */
+
+
 class GameStudentNumberConditionTest extends Specification {
 
     private int NUMBER = 10

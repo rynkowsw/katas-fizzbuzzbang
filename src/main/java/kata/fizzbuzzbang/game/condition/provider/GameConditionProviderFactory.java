@@ -2,9 +2,6 @@ package kata.fizzbuzzbang.game.condition.provider;
 
 import kata.fizzbuzzbang.game.GameType;
 
-/**
- * Created by wojciech on 25.04.17.
- */
 
 public class GameConditionProviderFactory {
 

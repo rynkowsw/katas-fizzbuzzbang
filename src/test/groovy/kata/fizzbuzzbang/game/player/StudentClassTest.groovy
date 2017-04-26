@@ -1,9 +1,7 @@
 package kata.fizzbuzzbang.game.player
 
 import spock.lang.Specification
-/**
- * Created by wojciech on 26.04.17.
- */
+
 
 class StudentClassTest extends Specification {
 

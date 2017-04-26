@@ -2,9 +2,7 @@ package kata.fizzbuzzbang.game.condition.queredNumberConditions
 
 import spock.lang.Specification
 
-/**
- * Created by wojciech on 26.04.17.
- */
+
 class DivisibleByArgumentConditionTest extends Specification {
 
     def DIVIDER = 3

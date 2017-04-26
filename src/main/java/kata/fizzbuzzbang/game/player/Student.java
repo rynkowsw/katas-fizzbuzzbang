@@ -4,11 +4,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import kata.fizzbuzzbang.game.condition.provider.ConditionProvider;
-import kata.fizzbuzzbang.game.condition.base.GameCondition;
+import kata.fizzbuzzbang.game.condition.GameCondition;
 
-/**
- * Created by wojciech on 18.04.17.
- */
 
 public class Student implements Player {
 

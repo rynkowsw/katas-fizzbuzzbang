@@ -2,11 +2,9 @@ package kata.fizzbuzzbang.game.condition.studentNumberConditions;
 
 
 import kata.fizzbuzzbang.game.player.StudentClass;
-import kata.fizzbuzzbang.game.condition.base.Condition;
+import kata.fizzbuzzbang.game.condition.Condition;
 
-/**
- * Created by wojciech on 19.04.17.
- */
+
 public class GameStudentNumberCondition implements Condition {
 
     private StudentClass studentClass;

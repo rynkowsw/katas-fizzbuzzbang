@@ -5,9 +5,7 @@ import kata.fizzbuzzbang.game.player.StudentClass;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Created by wojciech on 18.04.17.
- */
+
 public class Teacher {
 
     final static Logger logger = LoggerFactory.getLogger(Teacher.class);

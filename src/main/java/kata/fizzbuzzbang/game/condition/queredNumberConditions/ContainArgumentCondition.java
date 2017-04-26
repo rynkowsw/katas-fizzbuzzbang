@@ -1,10 +1,8 @@
 package kata.fizzbuzzbang.game.condition.queredNumberConditions;
 
-import kata.fizzbuzzbang.game.condition.base.Condition;
+import kata.fizzbuzzbang.game.condition.Condition;
 
-/**
- * Created by wojciech on 24.04.17.
- */
+
 public class ContainArgumentCondition implements Condition {
 
     private final int substringNumber;

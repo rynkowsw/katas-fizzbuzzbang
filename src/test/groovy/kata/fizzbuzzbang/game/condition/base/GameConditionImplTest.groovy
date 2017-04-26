@@ -1,10 +1,11 @@
 package kata.fizzbuzzbang.game.condition.base
 
 import kata.fizzbuzzbang.game.Answer
+import kata.fizzbuzzbang.game.condition.Condition
+import kata.fizzbuzzbang.game.condition.GameConditionImpl
 import spock.lang.Specification
-/**
- * Created by wojciech on 26.04.17.
- */
+
+
 class GameConditionImplTest extends Specification {
 
 

@@ -1,10 +1,8 @@
-package kata.fizzbuzzbang.game.condition.base;
+package kata.fizzbuzzbang.game.condition;
 
 import kata.fizzbuzzbang.game.Answer;
 
-/**
- * Created by wojciech on 25.04.17.
- */
+
 public class GameConditionImpl implements GameCondition {
 
     private Condition condition;

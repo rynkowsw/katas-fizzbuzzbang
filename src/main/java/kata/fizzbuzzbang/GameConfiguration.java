@@ -9,9 +9,7 @@ import kata.fizzbuzzbang.game.condition.provider.GameConditionProviderFactory;
 import kata.fizzbuzzbang.game.player.Student;
 import kata.fizzbuzzbang.game.player.StudentClass;
 
-/**
- * Created by wojciech on 25.04.17.
- */
+
 public class GameConfiguration {
 
     private GameType gameType;
@@ -26,8 +24,8 @@ public class GameConfiguration {
         gameType = GameType.EXTENDED;
         numberOfQuestions = 100;
         studentClass = new StudentClass();
-        studentClass.addStudents( studentList(studentClass) );
         gameConditionProviderFactory = new GameConditionProviderFactory();
+        studentClass.addStudents( studentList(studentClass) );
     }
 
     private List<Student> studentList(StudentClass studentClass){

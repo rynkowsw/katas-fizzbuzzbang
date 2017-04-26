@@ -3,9 +3,8 @@ package kata.fizzbuzzbang
 import kata.fizzbuzzbang.game.player.Student
 import kata.fizzbuzzbang.game.player.StudentClass
 import spock.lang.Specification
-/**
- * Created by wojciech on 25.04.17.
- */
+
+
 class TeacherTest extends Specification {
 
     def student

@@ -5,15 +5,13 @@ import java.util.List;
 
 import kata.fizzbuzzbang.game.Answer;
 import kata.fizzbuzzbang.game.player.StudentClass;
-import kata.fizzbuzzbang.game.condition.base.GameCondition;
-import kata.fizzbuzzbang.game.condition.base.GameConditionImpl;
+import kata.fizzbuzzbang.game.condition.GameCondition;
+import kata.fizzbuzzbang.game.condition.GameConditionImpl;
 import kata.fizzbuzzbang.game.condition.queredNumberConditions.DivisibleByArgumentCondition;
 import kata.fizzbuzzbang.game.condition.operators.ConditionAndOperator;
 import kata.fizzbuzzbang.game.condition.operators.ConditionNOTOperator;
 
-/**
- * Created by wojciech on 25.04.17.
- */
+
 public class StandardGameConditionProvider implements ConditionProvider {
 
 

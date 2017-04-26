@@ -1,11 +1,10 @@
 package kata.fizzbuzzbang.game.player
 
-import kata.fizzbuzzbang.game.condition.base.GameCondition
+import kata.fizzbuzzbang.game.condition.GameCondition
 import kata.fizzbuzzbang.game.condition.provider.ConditionProvider
 import spock.lang.Specification
-/**
- * Created by wojciech on 26.04.17.
- */
+
+
 class StudentTest extends Specification {
 
     def conditionProvider, studentClass
